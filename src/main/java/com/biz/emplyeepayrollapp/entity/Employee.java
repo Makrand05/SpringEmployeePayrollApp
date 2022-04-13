@@ -1,6 +1,7 @@
 package com.biz.emplyeepayrollapp.entity;
 
 import com.biz.emplyeepayrollapp.dto.EmployeeDTO;
+import com.biz.emplyeepayrollapp.dto.ResponseDTO;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -23,4 +24,6 @@ public class Employee {
         this.name = name.name;
         this.salary = name.salary;
     }
+
+
 }

@@ -62,8 +62,8 @@ public class EmployeePayrollController {
 
     }
 
-    @PutMapping("/update")
-    public ResponseEntity<String> updateEmployeeData(@RequestBody EmployeeDTO employeeDTO){
+    @PutMapping("/update/{empId}")
+    public ResponseEntity<String> updateEmployeeData(@PathVariable("empId") int empId,@RequestBody EmployeeDTO employeeDTO){
 //        Employee employee=null;
 //        employee=new Employee(1,employeeDTO);
 //        ResponseDTO responseDTO=new ResponseDTO("Update Employee Data",employee);
@@ -71,8 +71,8 @@ public class EmployeePayrollController {
         //return new ResponseEntity("Update Employee Data"+employeeDTO+" "+ empId,HttpStatus.OK);
 
 
-        Employee employee1= iEmployeePayrollService.updateEmployeeData(employeeDTO);
-        return new ResponseEntity(new ResponseDTO("Updated Employee by ID"+employee1.getId(),employee1),HttpStatus.OK);
+        Employee employee1= iEmployeePayrollService.updateEmployeeData(empId,employeeDTO);
+        return null;//new ResponseEntity(new ResponseDTO("Updated Employee by ID"+employee1.getId(),employee1),HttpStatus.OK);
 
 
     }
